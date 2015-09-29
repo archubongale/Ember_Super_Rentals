@@ -1,14 +1,7 @@
-<li>{{rental.owner}}'s {{rental.type}} in {{rental.city}}
-  {{#if isImageShowing }}
-<<<<<<< HEAD
-        <p><img src={{rental.image}} alt={{rental.type}} {{action 'imageHide'}}></p>
-      {{else}}
-      <button {{action 'imageShow'}}>Show image</button>
-=======
-        <p><img src={{rental.image}} alt={{rental.type}} ></p>
-      {{else}}
-      <button {{action 'imageShow'}}>Image</button>
->>>>>>> 534f5974481e0fdb4ad808a19fe743b05f2db5b6
-     {{/if}}
-     <button {{action 'delete' rental}}>Delete</button>
+<li>{{#link-to 'rental' rental.id}}{{rental.owner}}'s {{rental.type}} in {{rental.city.name}} {{/link-to}}
+  {{#if isImageShowing}}
+    <p><img src={{rental.image}} alt={{rental.type}} {{action 'imageHide'}}></p>
+  {{else}}
+    <button {{action 'imageShow'}}>Image</button>
+  {{/if}}
 </li>

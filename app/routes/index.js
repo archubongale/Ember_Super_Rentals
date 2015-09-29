@@ -35,11 +35,16 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
 
-<<<<<<< HEAD
+    updateRental(rental, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!==undefined) {
+          rental.set(key,params[key]);
+        }
+      });
+      rental.save();
+      this.transitionTo('index');
+    },
 
-=======
-  
->>>>>>> 534f5974481e0fdb4ad808a19fe743b05f2db5b6
     destroyRental(rental) {
       rental.destroyRecord();
       this.transitionTo('index');
