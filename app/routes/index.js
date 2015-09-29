@@ -35,7 +35,11 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
 
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 534f5974481e0fdb4ad808a19fe743b05f2db5b6
     destroyRental(rental) {
       rental.destroyRecord();
       this.transitionTo('index');
